@@ -1,0 +1,93 @@
+#include <stdio.h>
+
+ 
+
+int main()
+
+{
+
+    int sensor_inputs[6][2] = {
+
+        {0, 0},
+
+        {1, 0},
+
+        {0, 0},
+
+        {0, 1},
+
+        {0, 0},
+
+        {1, 1}
+
+    };
+
+ 
+
+    int left, right, i;
+
+ 
+
+    printf("LINE FOLLOWER ROBOT - C SIMULATION\n");
+
+    printf("----------------------------------\n");
+
+    printf("Left  Right  Robot Action\n");
+
+ 
+
+    for (i = 0; i < 6; i++)
+
+    {
+
+        left = sensor_inputs[i][0];
+
+        right = sensor_inputs[i][1];
+
+ 
+
+        printf("  %d      %d     ", left, right);
+
+ 
+
+        if (left == 0 && right == 0)
+
+        {
+
+            printf("Move Forward\n");
+
+        }
+
+        else if (left == 1 && right == 0)
+
+        {
+
+            printf("Turn Left\n");
+
+        }
+
+        else if (left == 0 && right == 1)
+
+        {
+
+            printf("Turn Right\n");
+
+        }
+
+        else
+
+        {
+
+            printf("Stop\n");
+
+        }
+
+    }
+
+ 
+
+    return 0;
+
+}
+
+
